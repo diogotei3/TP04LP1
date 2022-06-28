@@ -1,4 +1,12 @@
-import java.util.Scanner;
+import java.util.*;
+
+/**
+ * Alterado pelo exercício 1 do trabalho final:
+ * Exercício 01(1,0)
+ Renomear as propriedades e métodos da classe Data, deixando-os de acordo com o padrão UML
+ (métodos getters e setters).
+ */
+
 /**
  *
  * @author Rian Gustavo Quintanilha de Aquino e Diogo Santos Teixeira
@@ -9,6 +17,7 @@ exercício anterior.
 public class main {
 
     public static void main(String[] args) {
+
         Scanner scan= new Scanner(System.in);
         int dia, mes, ano;
 
@@ -38,27 +47,27 @@ public class main {
         System.out.println("");
 
         System.out.println("Métodos entraDia/Mes/Ano: ");
-        obj1.entraDia();
-        obj1.entraMes();
-        obj1.entraAno();
+        obj1.setDia();
+        obj1.setMes();
+        obj1.setAno();
         System.out.println("");
 
-        obj2.entraDia(4);
-        obj2.entraMes(4);
-        obj2.entraAno(2004);
+        obj2.setDia(4);
+        obj2.setMes(4);
+        obj2.setAno(2004);
 
-        System.out.println("Dia primeira data: " +obj1.retDia());
-        System.out.println("Mes primeira data: " +obj1.retMes());
-        System.out.println("Ano primeira data: " +obj1.retAno());
+        System.out.println("Dia primeira data: " +obj1.getDia());
+        System.out.println("Mes primeira data: " +obj1.getMes());
+        System.out.println("Ano primeira data: " +obj1.getAno());
         System.out.println("");
 
-        System.out.println("Dia segunda data: " +obj2.retDia());
-        System.out.println("Mes segunda data: " +obj2.retMes());
-        System.out.println("Ano segunda data: " +obj2.retAno());
+        System.out.println("Dia segunda data: " +obj2.getDia());
+        System.out.println("Mes segunda data: " +obj2.getMes());
+        System.out.println("Ano segunda data: " +obj2.getAno());
         System.out.println("");
 
-        System.out.println("Primeira data: " +obj1.mostra1());
-        System.out.println("Segunda data: " +obj2.mostra2());
+        System.out.println("Primeira data: " +obj1.getData1());
+        System.out.println("Segunda data: " +obj2.getData2());
         System.out.println("");
 
         System.out.println("Data 1 tem ano bissexto? " +(obj1.bissexto()?"SIM":"NÃO"));
@@ -69,8 +78,8 @@ public class main {
         System.out.println("Dias transcorridos até data 2: " + obj2.diasTranscorridos());
         System.out.println("");
 
-        Data.apresentaDataAtual();
-
+        Data.getDataAtual();
 
     }
+
 }
