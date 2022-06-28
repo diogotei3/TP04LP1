@@ -2,10 +2,16 @@ import java.text.*;
 import java.util.*;
 
 /**
+ * Alterado pelo exercício 1 do trabalho final:
+ * Exercício 01(1,0)
+Renomear as propriedades e métodos da classe Data, deixando-os de acordo com o padrão UML
+(métodos getters e setters).
+ */
+
+/**
  * Exercício 01 - Crie a classe Data conforme especificado abaixo:
  *
  * @author Rian Gustavo Quintanilha de Aquino e Diogo Santos Teixeira
-
  O construtor Data() deverá permitir ao usuário digitar os valores de dia, mês e ano e com eles
 inicializar os atributos da classe. Os valores digitados deverão ser consistidos e só aceitos se válidos,
 caso contrário, redigitar;
@@ -59,19 +65,19 @@ public class Data {
         ano = a;
     }
 
-    public void entraDia(int d){
+    public void setDia(int d){
         dia = d;
     }
 
-    public void entraMes(int m){
+    public void setMes(int m){
         mes = m;
     }
 
-    public void entraAno(int a){
+    public void setAno(int a){
         ano = a;
     }
 
-    public void entraDia(){
+    public void setDia(){
         do{
             System.out.println("Digite o dia: ");
             System.out.print("-> ");
@@ -83,7 +89,7 @@ public class Data {
         }while(dia<=0 || dia>=32);
     }
 
-    public void entraMes(){
+    public void setMes(){
         do{
             System.out.println("Digite o mes: ");
             System.out.print("-> ");
@@ -95,7 +101,7 @@ public class Data {
         }while(mes<=0 || mes>=13);
     }
 
-    public void entraAno(){
+    public void setAno(){
         do{
             System.out.println("Digite o ano: ");
             System.out.print("-> ");
@@ -107,24 +113,25 @@ public class Data {
         }while(ano<0);
     }
 
-    public int retDia(){
+    public int getDia(){
         return dia;
+       
     }
 
-    public int retMes(){
+    public int getMes(){
         return mes;
     }
 
-    public int retAno(){
+    public int getAno(){
         return ano;
     }
 
-    public String mostra1(){
+    public String getData1(){
         String ret = dia + "/" + mes + "/" + ano;
         return ret;
     }
 
-    public String mostra2() {
+    public String getData2() {
         String text;
         switch (mes) {
             case 1:
@@ -185,7 +192,7 @@ public class Data {
         int dias= dia + 31*mes;
         return dias;
     }
-    public static void apresentaDataAtual (){
+    public static void getDataAtual (){
         DateFormat DFormat = DateFormat.getDateInstance();
         System.out.println( "A data atual: " + DFormat.format(new Date()));
     }
